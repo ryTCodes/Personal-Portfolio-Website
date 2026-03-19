@@ -1,0 +1,68 @@
+"use client";
+
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useState } from "react";
+import Link from "next/link";
+import { useLenis } from "lenis/react";
+import { Magnetic } from "@/components/ui/Magnetic";
+
+export function Navbar() {
+  const { scrollY } = useScroll();
+  const lenis = useLenis();
+  const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > 100 && latest > previous) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+    setScrolled(latest > 50);
+  });
+
+  return (
+    <motion.nav
+      variants={{
+        visible: { y: 0, opacity: 1 },
+        hidden: { y: "-100%", opacity: 0 },
+      }}
+      initial="visible"
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-[#050505]/80 backdrop-blur-lg py-4 border-b border-[#333]" : "bg-transparent py-8"
+      }`}
+    >
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
+        <Link href="/" className="text-xl font-bold tracking-tighter uppercase display-font flex items-center gap-2 hover:text-[#ccff00] transition-colors relative z-10">
+          <div className="w-2 h-2 rounded-full bg-[#ccff00]" />
+          RYTCODES
+        </Link>
+        <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-[#a1a1aa] z-10">
+          {["About", "Projects", "Achievements", "Contact"].map((item) => {
+            const targetId = `#${item.toLowerCase()}`;
+            return (
+            <Magnetic key={item}>
+              <a 
+                href={targetId}
+                onClick={(e) => {
+                  e.preventDefault();
+                  lenis?.scrollTo(targetId);
+                }}
+                className="hover:text-white transition-colors relative group block py-4 flex flex-col items-center"
+              >
+                {item}
+                <span className="absolute bottom-2 w-0 h-[2px] bg-[#ccff00] transition-all duration-300 group-hover:w-[120%]" />
+              </a>
+            </Magnetic>
+          )})}
+        </div>
+        <button className="md:hidden text-sm uppercase tracking-widest hover:text-[#ccff00] transition-colors z-10">
+          Menu
+        </button>
+      </div>
+    </motion.nav>
+  );
+}
