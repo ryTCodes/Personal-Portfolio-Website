@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
 import { useLenis } from "lenis/react";
@@ -11,6 +11,7 @@ export function Navbar() {
   const lenis = useLenis();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -36,7 +37,11 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold tracking-tighter uppercase display-font flex items-center gap-2 hover:text-[#ccff00] transition-colors relative z-10">
+        <Link 
+          href="/" 
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="text-xl font-bold tracking-tighter uppercase display-font flex items-center gap-2 hover:text-[#ccff00] transition-colors relative z-[100]"
+        >
           <div className="w-2 h-2 rounded-full bg-[#ccff00]" />
           RYTCODES
         </Link>
@@ -59,10 +64,45 @@ export function Navbar() {
             </Magnetic>
           )})}
         </div>
-        <button className="md:hidden text-sm uppercase tracking-widest hover:text-[#ccff00] transition-colors z-10">
-          Menu
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-sm uppercase tracking-widest hover:text-[#ccff00] transition-colors z-[100]"
+        >
+          {isMobileMenuOpen ? "Close" : "Menu"}
         </button>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 z-[90] bg-[#050505] flex flex-col items-center justify-center gap-8 md:hidden h-[100dvh]"
+          >
+            {["About", "Projects", "Achievements", "Contact"].map((item) => {
+              const targetId = `#${item.toLowerCase()}`;
+              return (
+                <a
+                  key={item}
+                  href={targetId}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    setTimeout(() => {
+                      lenis?.scrollTo(targetId);
+                    }, 500);
+                  }}
+                  className="text-4xl font-bold uppercase tracking-widest hover:text-[#ccff00] transition-colors"
+                >
+                  {item}
+                </a>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }

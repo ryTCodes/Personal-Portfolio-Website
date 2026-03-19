@@ -59,8 +59,8 @@ export function Hero() {
           Taking on new select projects
         </motion.div>
         
-        <AnimatedText text="CREATIVE" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5]" />
-        <AnimatedText text="DEVELOPER" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5] mt-2 md:mt-4" />
+        <AnimatedText text="RAYYAN" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5]" />
+        <AnimatedText text="TAUSALKAR" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5] mt-2 md:mt-4" />
         
         <motion.p 
           initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,7 @@ export function Hero() {
           transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 md:mt-12 text-lg md:text-3xl text-[#a1a1aa] max-w-[90%] md:max-w-3xl font-light"
         >
-          Merging high-end visual design with rigorous engineering.
+          Aspiring AI Engineer specializing in Machine Learning and Data Science.
         </motion.p>
       </motion.div>
 

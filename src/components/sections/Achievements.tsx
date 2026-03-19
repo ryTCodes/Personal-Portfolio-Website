@@ -3,32 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const achievementsList = [
-  { 
-    title: "Global Web3 Hackathon", 
-    award: "1st Place Overall", 
-    year: "2026",
-    description: "Architected a highly scalable decentralized exchange utilizing zero-knowledge rollups, securing top honors among 500+ international teams."
-  },
-  { 
-    title: "NASA Space Apps", 
-    award: "Best Use of Data", 
-    year: "2025",
-    description: "Developed an interactive 3D particle simulation mapping orbital debris trajectories using real-time open satellite tracking telemetry."
-  },
-  { 
-    title: "ETHGlobal London", 
-    award: "Finalist", 
-    year: "2024",
-    description: "Built a fully generative smart contract platform that visually mints purely on-chain generative art directly into the user's wallet."
-  },
-  { 
-    title: "Reactathon", 
-    award: "Best UI/UX Design", 
-    year: "2023",
-    description: "Engineered a cinematic, physics-driven data dashboard showcasing custom Framer Motion variants and complex state orchestration."
-  },
-];
+import { achievementsList } from "@/data/achievements";
 
 export function Achievements() {
   const containerRef = useRef<HTMLElement>(null);
@@ -38,7 +13,7 @@ export function Achievements() {
   });
 
   return (
-    <section ref={containerRef} id="achievements" className="py-40 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen flex flex-col justify-center bg-[#050505] relative z-20">
+    <section ref={containerRef} id="achievements" className="py-40 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen flex flex-col justify-center bg-[#050505] relative z-20" style={{ position: 'relative' }}>
       <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00] mb-24 md:mb-32 text-center md:text-left">( Hackathons & Events )</h2>
       
       <div className="flex flex-col relative border-t border-[#1f1f1f]">

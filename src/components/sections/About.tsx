@@ -20,11 +20,11 @@ export function About() {
     offset: ["start 80%", "start 20%"]
   });
 
-  const paragraph = "With over a decade of experience bridging the gap between design and engineering, I specialize in crafting interactive interfaces that leave a lasting impression. I leverage the React ecosystem, WebGL, and precise motion design to build fast, accessible, and uniquely cinematic digital products.";
+  const paragraph = "I am an undergraduate student at Anjuman-I-Islam's Kalsekar Technical Campus, Panvel, pursuing BE Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning. My primary focus is to be an AI Engineer, with a deep interest in Machine Learning, Data Science, and LLMs.";
   const words = paragraph.split(" ");
 
   return (
-    <section ref={container} id="about" className="py-40 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen flex items-center relative z-20 bg-[#050505]">
+    <section ref={container} id="about" className="py-40 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen flex items-center relative z-20 bg-[#050505]" style={{ position: 'relative' }}>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 w-full">
         <div className="lg:col-span-5">
           <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00] mb-8 lg:mb-0">( The Philosophy )</h2>
@@ -36,7 +36,7 @@ export function About() {
             viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.8 }}
           >
-            I reject <span className="text-[#555]">mediocrity in web design.</span> Every pixel must serve a purpose and deliver impact.
+            I reject <span className="text-[#555]">conventional limits in technology.</span> Every algorithm must serve a purpose and deliver intelligent impact.
           </motion.h3>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-[#a1a1aa] leading-relaxed font-light font-sans flex flex-wrap">
@@ -56,10 +56,10 @@ export function About() {
           >
             <h4 className="text-sm font-semibold uppercase tracking-widest text-[#f5f5f5] mb-6 font-sans">Core Arsenal</h4>
             <ul className="grid grid-cols-2 gap-y-4 gap-x-8 text-base font-sans text-[#a1a1aa]">
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Frontend Strategy</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Design Systems</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> WebGL & Shaders</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Creative Coding</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Artificial Intelligence</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Machine Learning</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Data Science</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Large Language Models</li>
             </ul>
           </motion.div>
         </div>
