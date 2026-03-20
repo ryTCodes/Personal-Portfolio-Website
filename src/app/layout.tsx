@@ -17,8 +17,40 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Rayyan Tausalkar | Portfolio",
-  description: "A premium interactive portfolio pushing web boundaries made by Rayyan Tausalkar.",
+  metadataBase: new URL("https://rayyantlk.vercel.app"),
+  title: {
+    default: "Rayyan Tausalkar | Portfolio",
+    template: "%s | Rayyan Tausalkar",
+  },
+  description: "Aspiring AI Engineer specializing in Artificial Intelligence, Machine Learning, Data Science, and Large Language Models. Exploring the boundaries of technology.",
+  keywords: ["Rayyan Tausalkar", "AI Engineer", "Machine Learning", "Data Science", "LLM", "Developer", "Portfolio", "ryTCodes"],
+  authors: [{ name: "Rayyan Tausalkar" }],
+  creator: "Rayyan Tausalkar",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://rayyantlk.vercel.app",
+    title: "Rayyan Tausalkar | AI Engineer & Developer",
+    description: "Aspiring AI Engineer specializing in Artificial Intelligence, Machine Learning, Data Science, and Large Language Models.",
+    siteName: "Rayyan Tausalkar Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rayyan Tausalkar | AI Engineer & Developer",
+    description: "Aspiring AI Engineer specializing in Artificial Intelligence, Machine Learning, Data Science, and Large Language Models.",
+    creator: "@ryTCodes",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

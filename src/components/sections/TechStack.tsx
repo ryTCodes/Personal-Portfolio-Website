@@ -19,7 +19,7 @@ export function TechStack() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:auto-rows-[350px]">
 
-        {/* Core AI & ML - Large Box */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function TechStack() {
           </div>
         </motion.div>
 
-        {/* Languages - Wide Stacked Box */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export function TechStack() {
           </div>
         </motion.div>
 
-        {/* Engineering - Wide Stacked Box */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

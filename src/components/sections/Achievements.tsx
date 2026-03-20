@@ -17,7 +17,7 @@ export function Achievements() {
       <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00] mb-24 md:mb-32 text-center md:text-left">( Hackathons & Events )</h2>
       
       <div className="flex flex-col relative border-t border-[#1f1f1f]">
-        {/* Animated drawing line across the entire container */}
+
         <div className="absolute left-0 top-0 w-full h-[1px]">
            <motion.div className="h-full bg-[#ccff00] origin-left" style={{ scaleX: scrollYProgress }} />
         </div>
@@ -31,7 +31,7 @@ export function Achievements() {
             transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="group flex flex-col xl:flex-row xl:items-center justify-between py-12 md:py-16 border-b border-[#1f1f1f] hover:bg-[#0a0a0a] transition-colors gap-6 xl:gap-0 px-4 relative overflow-hidden"
           >
-            {/* Inner dynamic border sweeps on hover */}
+
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[#ccff00] -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
             
             <div className="flex flex-col gap-4">
