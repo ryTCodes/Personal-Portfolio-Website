@@ -1,6 +1,6 @@
 export const projects = [
   {
-    slug: "Carbon-Net V2",
+    slug: "Carbon-Net-V2",
     title: "Carbon-Net V2",
     category: "Web3 Platform",
     year: "2026",

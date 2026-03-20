@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const Word = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
   const opacity = useTransform(progress, range, [0, 1]);
@@ -26,8 +27,23 @@ export function About() {
   return (
     <section ref={container} id="about" className="py-40 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen flex items-center relative z-20 bg-[#050505]" style={{ position: 'relative' }}>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 w-full">
-        <div className="lg:col-span-5">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00] mb-8 lg:mb-0">( The Philosophy )</h2>
+        <div className="lg:col-span-5 flex flex-col gap-8 lg:gap-16">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00]">( The Philosophy )</h2>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full max-w-md aspect-[4/5] rounded-xl overflow-hidden border border-[#1f1f1f]"
+          >
+            <Image 
+              src="/rayyan.jpeg" 
+              alt="Rayyan Tausalkar" 
+              fill
+              className="object-cover"
+            />
+          </motion.div>
         </div>
         <div className="lg:col-span-7 flex flex-col text-3xl md:text-4xl lg:text-5xl text-[#f5f5f5] leading-[1.3] gap-8 md:gap-12 font-medium display-font">
           <motion.h3 

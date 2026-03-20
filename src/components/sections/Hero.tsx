@@ -38,18 +38,18 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-6">
-      <motion.div 
-         initial={{ opacity: 0, scale: 0.8 }}
-         animate={{ opacity: 1, scale: 1 }}
-         transition={{ duration: 2.5, ease: "easeOut" }}
-         className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(204,255,0,0.08)_0%,transparent_50%)] pointer-events-none"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2.5, ease: "easeOut" }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(204,255,0,0.08)_0%,transparent_50%)] pointer-events-none"
       />
-      
-      <motion.div 
+
+      <motion.div
         style={{ y: heroY, opacity: heroOpacity, scale }}
         className="z-10 flex flex-col items-center text-center mt-20 w-full"
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -58,21 +58,21 @@ export function Hero() {
           <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse" />
           Taking on new select projects
         </motion.div>
-        
+
         <AnimatedText text="RAYYAN" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5]" />
         <AnimatedText text="TAUSALKAR" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5] mt-2 md:mt-4" />
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 md:mt-12 text-lg md:text-3xl text-[#a1a1aa] max-w-[90%] md:max-w-3xl font-light"
         >
-          Aspiring AI Engineer specializing in Machine Learning and Data Science.
+          Aspiring AI Engineer specializing in Artificial Intelligence and Machine Learning.
         </motion.p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: 64 }}
         transition={{ duration: 1.5, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}

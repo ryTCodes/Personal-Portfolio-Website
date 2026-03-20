@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
 
-        <div className="w-full h-[50vh] md:h-[80vh] rounded-[2rem] md:rounded-[4rem] overflow-hidden relative shadow-2xl group">
+        <div className="w-full aspect-video rounded-[2rem] md:rounded-[4rem] overflow-hidden relative shadow-2xl group">
           <img 
             src={project.image} 
             alt={project.title} 

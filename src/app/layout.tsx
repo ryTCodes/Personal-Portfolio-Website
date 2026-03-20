@@ -17,8 +17,8 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Portfolio | Digital Experiences",
-  description: "A premium interactive portfolio pushing web boundaries.",
+  title: "Rayyan Tausalkar | Portfolio",
+  description: "A premium interactive portfolio pushing web boundaries made by Rayyan Tausalkar.",
 };
 
 export default function RootLayout({

@@ -38,10 +38,10 @@ export function Projects() {
               className="group relative block w-full border-b border-[#1f1f1f] py-16 md:py-24 hover:bg-[#0a0a0a] transition-colors cursor-pointer"
             >
               <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-8 relative z-10 px-4">
-                <h3 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl display-font font-bold tracking-tighter group-hover:translate-x-8 transition-transform duration-700 ease-out text-[#f5f5f5]">
+                <h3 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl display-font font-bold tracking-tighter group-hover:translate-x-4 xl:group-hover:translate-x-8 transition-transform duration-700 ease-out text-[#f5f5f5] break-words">
                   {project.title}
                 </h3>
-                <div className="flex items-center gap-6 md:gap-12 text-[#a1a1aa] group-hover:text-[#f5f5f5] transition-colors duration-500 lg:pr-12">
+                <div className="flex items-center gap-6 md:gap-12 text-[#a1a1aa] group-hover:text-[#f5f5f5] transition-colors duration-500 lg:pr-12 mt-4 xl:mt-0">
                   <span className="text-sm uppercase tracking-widest hidden md:block">{project.category}</span>
                   <span className="text-sm font-mono">{project.year}</span>
                   <Magnetic>
@@ -58,7 +58,7 @@ export function Projects() {
 
       <motion.div
         style={{ x: cursorX, y: cursorY }}
-        className={`fixed top-0 left-0 w-[500px] h-[300px] pointer-events-none transition-all duration-500 z-[100] overflow-hidden rounded-sm hidden xl:block shadow-2xl ${
+        className={`fixed top-0 left-0 w-[500px] aspect-video pointer-events-none transition-all duration-500 z-[100] overflow-hidden rounded-sm hidden xl:block shadow-2xl ${
           activeProject !== null ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}
       >
