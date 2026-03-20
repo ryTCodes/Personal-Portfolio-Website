@@ -39,10 +39,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
           
           <div className="lg:col-span-4 flex flex-col gap-10 md:gap-12 text-sm uppercase tracking-widest font-semibold text-[#a1a1aa]">
-            <div>
-              <span className="text-[#555] block mb-3">Role</span>
-              <span className="text-[#f5f5f5] text-base">{project.role}</span>
-            </div>
+
             <div>
               <span className="text-[#555] block mb-3">Year</span>
               <span className="text-[#f5f5f5] text-base font-mono">{project.year}</span>
