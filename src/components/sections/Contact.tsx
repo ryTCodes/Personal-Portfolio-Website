@@ -5,9 +5,9 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export function Contact() {
   const socials = [
-    { name: "LinkedIn", url: "https://linkedin.com", icon: FaLinkedin },
-    { name: "GitHub", url: "https://github.com", icon: FaGithub },
-    { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/rayyan-tausalkar-0b86202bb", icon: FaLinkedin },
+    { name: "GitHub", url: "https://github.com/ryTCodes", icon: FaGithub },
+    { name: "Instagram", url: "https://www.instagram.com/_rayyan_2766", icon: FaInstagram },
   ];
 
   return (

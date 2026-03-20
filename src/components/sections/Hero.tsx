@@ -56,7 +56,7 @@ export function Hero() {
           className="px-5 py-2 rounded-full border border-[#333] text-xs font-semibold tracking-widest uppercase mb-12 flex items-center gap-3 bg-[#0a0a0a]"
         >
           <span className="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse" />
-          Taking on new select projects
+          Building Systems that matters
         </motion.div>
 
         <AnimatedText text="RAYYAN" className="text-[10vw] md:text-[9vw] leading-[0.80] display-font font-black tracking-tighter uppercase text-[#f5f5f5]" />

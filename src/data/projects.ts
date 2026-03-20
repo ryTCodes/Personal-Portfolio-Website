@@ -14,7 +14,7 @@ export const projects = [
     category: "AI, Cybersecurity and Blockchain",
     year: "2025",
     image: "/images/Wichain.jpg",
-    description: "A cybersecurity solution for Wi-Fi spoofing detection. The system scans local networks and employs a Machine Learning model—analyzing SSID, BSSID, signal strength, and encryption patterns—to identify rogue access points, subsequently logging threat data onto a blockchain for immutable auditing.",
+    description: "A cybersecurity solution for Wi-Fi spoofing detection. The system scans local networks and employs a Machine Learning model analyzing SSID, BSSID, signal strength, and encryption patterns to identify rogue access points, subsequently logging threat data onto a blockchain for immutable auditing.",
     tech: ["React", "FastAPI", "Blockchain", "Tailwind CSS", "Solidity", "Ethers.js"],
   },
 ];

@@ -38,9 +38,14 @@ export function Projects() {
               className="group relative block w-full border-b border-[#1f1f1f] py-16 md:py-24 hover:bg-[#0a0a0a] transition-colors cursor-pointer"
             >
               <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-8 relative z-10 px-4">
-                <h3 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl display-font font-bold tracking-tighter group-hover:translate-x-4 xl:group-hover:translate-x-8 transition-transform duration-700 ease-out text-[#f5f5f5] break-words">
-                  {project.title}
-                </h3>
+                <div className="flex flex-col gap-4 xl:gap-6 max-w-4xl">
+                  <h3 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl display-font font-bold tracking-tighter group-hover:translate-x-4 xl:group-hover:translate-x-8 transition-transform duration-700 ease-out text-[#f5f5f5] break-words">
+                    {project.title}
+                  </h3>
+                  <p className="text-[#a1a1aa] text-base md:text-lg lg:text-xl font-light group-hover:translate-x-4 xl:group-hover:translate-x-8 transition-transform duration-700 ease-out delay-75 line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
                 <div className="flex items-center gap-6 md:gap-12 text-[#a1a1aa] group-hover:text-[#f5f5f5] transition-colors duration-500 lg:pr-12 mt-4 xl:mt-0">
                   <span className="text-sm uppercase tracking-widest hidden md:block">{project.category}</span>
                   <span className="text-sm font-mono">{project.year}</span>
