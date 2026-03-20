@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable} scroll-smooth`}>
-      <body className="antialiased min-h-screen bg-[#050505] text-[#f5f5f5] selection:bg-[#ccff00] selection:text-[#050505]">
+      <body className="antialiased min-h-screen bg-[#050505] text-[#f5f5f5] selection:bg-[#ccff00] selection:text-[#050505] overflow-x-hidden">
         <SmoothScroll>
           <Navbar />
           {children}

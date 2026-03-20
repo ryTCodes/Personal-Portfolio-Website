@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           Back to Works
         </Link>
         
-        <h1 className="text-[14vw] md:text-[8vw] leading-[0.85] display-font font-black tracking-tighter uppercase mb-12 mix-blend-difference">
+        <h1 className="text-[14vw] md:text-[8vw] leading-[0.85] display-font font-black tracking-tighter uppercase mb-12 mix-blend-difference break-words">
           {project.title}
         </h1>
 
