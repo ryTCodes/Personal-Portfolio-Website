@@ -1,13 +1,13 @@
 export const projects = [
-  {
-    slug: "Carbon-Net-V2",
-    title: "Carbon-Net V2",
-    category: "AI, Sustainable and Blockchain",
-    year: "2026",
-    image: "/images/carbonnet-v2.jpg",
-    description: "A decentralized verification ecosystem for carbon credits. It utilizes a 4-layer satellite imagery analysis system powered by AI to perform sentiment-based environmental assessment, ensuring the authenticity of carbon offsets before recording them on the Polygon blockchain.",
-    tech: ["Next.js", "FastAPI", "Blockchain", "Polygon", "Solidity"],
-  },
+  // {
+  //   slug: "Carbon-Net-V2",
+  //   title: "Carbon-Net V2",
+  //   category: "AI, Sustainable and Blockchain",
+  //   year: "2026",
+  //   image: "/images/carbonnet-v2.jpg",
+  //   description: "A decentralized verification ecosystem for carbon credits. It utilizes a 4-layer satellite imagery analysis system powered by AI to perform sentiment-based environmental assessment, ensuring the authenticity of carbon offsets before recording them on the Polygon blockchain.",
+  //   tech: ["Next.js", "FastAPI", "Blockchain", "Polygon", "Solidity"],
+  // },
   {
     slug: "WiChain",
     title: "WiChain",
