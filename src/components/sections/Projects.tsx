@@ -73,7 +73,7 @@ export function Projects() {
               key={i} 
               className={`absolute inset-0 transition-opacity duration-700 ${activeProject === i ? 'opacity-100' : 'opacity-0'}`}
             >
-              <img src={p.image} className="w-full h-full object-cover" />
+              <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>

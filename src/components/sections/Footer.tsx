@@ -11,13 +11,13 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="https://www.linkedin.com/in/rayyan-tausalkar-0b86202bb" target="_blank" rel="noopener noreferrer" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
+          <a href="https://www.linkedin.com/in/rayyan-tausalkar-0b86202bb" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
             <FaLinkedin size={28} />
           </a>
-          <a href="https://github.com/ryTCodes" target="_blank" rel="noopener noreferrer" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
+          <a href="https://github.com/ryTCodes" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
             <FaGithub size={28} />
           </a>
-          <a href="https://www.instagram.com/_rayyan_2766" target="_blank" rel="noopener noreferrer" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
+          <a href="https://www.instagram.com/_rayyan_2766" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" className="text-[#050505] hover:text-[#050505]/70 transition-colors hover:scale-110 active:scale-95 duration-300">
             <FaInstagram size={28} />
           </a>
         </div>
