@@ -47,7 +47,7 @@ export function Hero() {
 
       <motion.div
         style={{ y: heroY, opacity: heroOpacity, scale }}
-        className="z-10 flex flex-col items-center text-center mt-20 w-full"
+        className="z-10 flex flex-col items-center text-center mt-8 md:mt-20 w-full"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
