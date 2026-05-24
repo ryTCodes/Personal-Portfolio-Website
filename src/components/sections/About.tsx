@@ -29,24 +29,24 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 w-full">
         <div className="lg:col-span-5 flex flex-col gap-8 lg:gap-16">
           <h2 className="text-sm font-semibold uppercase tracking-widest text-[#ccff00]">( The Philosophy )</h2>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
             className="relative w-full max-w-md aspect-[4/5] rounded-xl overflow-hidden border border-[#1f1f1f]"
           >
-            <Image 
-              src="/rayyan.jpeg" 
-              alt="Rayyan Tausalkar" 
+            <Image
+              src="/rayyan.jpeg"
+              alt="Rayyan Tausalkar"
               fill
               className="object-cover"
             />
           </motion.div>
         </div>
         <div className="lg:col-span-7 flex flex-col text-3xl md:text-4xl lg:text-5xl text-[#f5f5f5] leading-[1.3] gap-8 md:gap-12 font-medium display-font">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20px" }}
@@ -54,7 +54,7 @@ export function About() {
           >
             I reject <span className="text-[#555]">conventional limits in technology.</span> Every algorithm must serve a purpose and deliver intelligent impact.
           </motion.h3>
-          
+
           <p className="text-xl md:text-2xl lg:text-3xl text-[#a1a1aa] leading-relaxed font-light font-sans flex flex-wrap">
             {words.map((word, i) => {
               const start = i / words.length;
@@ -62,8 +62,8 @@ export function About() {
               return <Word key={i} progress={scrollYProgress} range={[start, end]}>{word}</Word>
             })}
           </p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20px" }}
@@ -72,10 +72,10 @@ export function About() {
           >
             <h4 className="text-sm font-semibold uppercase tracking-widest text-[#f5f5f5] mb-6 font-sans">Core Arsenal</h4>
             <ul className="grid grid-cols-2 gap-y-4 gap-x-8 text-base font-sans text-[#a1a1aa]">
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Artificial Intelligence</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Machine Learning</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Data Science</li>
-              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]"/> Large Language Models</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]" /> Artificial Intelligence</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]" /> Machine Learning</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]" /> Data Science</li>
+              <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#ccff00]" /> Large Language Models</li>
             </ul>
           </motion.div>
         </div>

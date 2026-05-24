@@ -13,7 +13,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-40 md:py-64 bg-[#ccff00] text-[#050505] relative z-20 rounded-t-[3rem] md:rounded-t-[8vw] mt-24">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 text-center flex flex-col items-center">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -22,10 +22,10 @@ export function Contact() {
         >
           Let's Talk
         </motion.h2>
-        
+
         <div className="flex flex-row items-center gap-6 md:gap-12 justify-center">
           {socials.map((social, i) => (
-            <motion.a 
+            <motion.a
               key={social.name}
               href={social.url}
               target="_blank"

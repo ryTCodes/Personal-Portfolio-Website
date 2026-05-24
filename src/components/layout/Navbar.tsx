@@ -3,6 +3,7 @@
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLenis } from "lenis/react";
 import { Magnetic } from "@/components/ui/Magnetic";
 
@@ -40,10 +41,9 @@ export function Navbar() {
         <Link 
           href="/" 
           onClick={() => setIsMobileMenuOpen(false)}
-          className="text-xl font-bold tracking-tighter uppercase display-font flex items-center gap-2 hover:text-[#ccff00] transition-colors relative z-[100]"
+          className="flex items-center gap-2 relative z-[100] hover:opacity-80 transition-opacity"
         >
-          <div className="w-2 h-2 rounded-full bg-[#ccff00]" />
-          RYTCODES
+          <Image src="/nav-logo.png" alt="Logo" width={180} height={60} className="object-contain h-12 w-auto md:h-16" />
         </Link>
         <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-[#a1a1aa] z-10">
           {["About", "Projects", "Achievements", "Contact"].map((item) => {
